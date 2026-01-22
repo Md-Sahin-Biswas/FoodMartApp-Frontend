@@ -7,7 +7,7 @@ const Saved = () => {
     const [ videos, setVideos ] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/food/save", { withCredentials: true })
+        axios.get("https://foodmartapp-backend.onrender.com/api/food/save", { withCredentials: true })
             .then(response => {
                 const savedFoods = response.data.savedFoods.map((item) => ({
                     _id: item.food._id,
